@@ -52,5 +52,4 @@ def sweetAndSavory(dishes, target):
 def isValidCandidate(candidate_sum, target):
     if candidate_sum > target:
         return False
-    else:
-        return True
+    return True
