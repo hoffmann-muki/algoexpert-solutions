@@ -47,4 +47,3 @@ def constructMinHeightBst(array, startIdx, endIdx):
     bst.left = constructMinHeightBst(array, startIdx, midIdx-1)
     bst.right = constructMinHeightBst(array, midIdx+1, endIdx)
     return bst
-
