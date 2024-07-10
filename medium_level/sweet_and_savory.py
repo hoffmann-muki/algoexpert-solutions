@@ -18,7 +18,6 @@ def sweetAndSavory(dishes, target):
     savoryDishesLength = len(savoryDishes)
     bestCandidate = [0, 0]
     bestDistance = math.inf
-    print(sweetDishes, savoryDishes)
     while True:
         candidate = [sweetDishes[sweetDishesIndex], savoryDishes[savoryDishesIndex]]
         candidate_sum = (candidate[0] + candidate[1])
