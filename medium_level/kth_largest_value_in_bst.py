@@ -6,19 +6,19 @@ class BST:
         self.right = right
 
 # right -> middle -> left
-def backwardsOrderTraverse(tree):
-    if tree.left is not None and tree.right is not None:
-        return backwardsOrderTraverse(tree.right) + [tree.value] + backwardsOrderTraverse(tree.left)
-    elif tree.left is not None and tree.right is None:
-        return [tree.value] + backwardsOrderTraverse(tree.left)
-    elif tree.left is None and tree.right is not None:
-        return backwardsOrderTraverse(tree.right) + [tree.value]
+def reverseInOrderTraverse(tree):
+    if tree.left and tree.right:
+        return reverseInOrderTraverse(tree.right) + [tree.value] + reverseInOrderTraverse(tree.left)
+    elif tree.left and not tree.right:
+        return [tree.value] + reverseInOrderTraverse(tree.left)
+    elif not tree.left and tree.right:
+        return reverseInOrderTraverse(tree.right) + [tree.value]
     else:
         return [tree.value]
 
 # O(n) space | O(n) time
 def findKthLargestValueInBst(tree, k):
-    return backwardsOrderTraverse(tree)[k-1]
+    return reverseInOrderTraverse(tree)[k-1]
 
 # **************************** Optimal Solution ******************************
 
