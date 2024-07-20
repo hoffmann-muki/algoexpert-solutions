@@ -1,6 +1,5 @@
 def insertionSort(array):
     n = len(array)
-    cursor = 1
     for i in range(1, n):
         if array[i-1] > array[i]:
             temp = array[i]
@@ -17,4 +16,3 @@ def sortArray(array):
             array[j] = array[j-1]
             array[j-1] = temp
     return array
-
