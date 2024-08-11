@@ -1,4 +1,4 @@
-# O(nm) time | O(1) space
+# O(n) time | O(1) space
 def threeNumberSort(array, order):
     last = 0
     for element in order:
@@ -9,8 +9,6 @@ def threeNumberSort(array, order):
                 array[i] = tmp
                 last += 1
     return array
-
-# ******* Optimal Solution *******
 
 # O(n) time | O(1) space
 def threeNumberSort(array, order):
